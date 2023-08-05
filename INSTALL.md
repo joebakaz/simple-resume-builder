@@ -64,12 +64,13 @@ Before you begin, make sure you have the following software installed:
    ```sh
    php artisan serve
 
-   OR
+**OR**
 
-   If you are using Laravel Homestead for your development environment, you don't need to use the php artisan serve command. Instead, you'll be accessing your application through the virtual machine provided by Homestead.
+   If you are using **Laravel Homestead** for your development environment, you don\'t need to use the php artisan serve command. Instead, you\'ll be accessing your application through the virtual machine provided by Homestead.
 
    ```sh
    vagrant up
+   ```
 
    Modify your  **Homestead.yaml** configuration file, under the sites section.
 
@@ -77,5 +78,18 @@ Before you begin, make sure you have the following software installed:
    sites:
     - map: homestead.test
       to: /home/vagrant/code/public
+   ```
 
    Make sure to replace `http://homestead.test` with the actual URL you've configured for your Homestead environment.
+   
+**ALSO**
+You might need to change the **host** configuration in **vite.config.js**
+
+    
+    server: {
+        host: '192.168.10.10',
+        watch: {
+            usePolling: true,
+        },
+    },
+    
