@@ -8,7 +8,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             
             <div class="d-flex justify-content-end mt-3 pb-3">
-                <a href="http://joe.test/resumes/create" class="shadow btn btn-primary">Create New Resume</a>
+                <a href="{{ route('resumes.create') }}" class="shadow btn btn-primary">Create New Resume</a>
             </div>
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg p-6" id="resumeListingActionSection">
                 <table class="table">
@@ -24,7 +24,7 @@
                         @foreach ($resumes as $resume)
                             <tr>
                                 <td>{{ $resume->title }}</td>
-                                <td><a href="{{ route('resume.public', $resume->public_url) }}">Public View</a></td>
+                                <td><a href="{{ route('resumes.public', $resume->public_url) }}">Public View</a></td>
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <a href="{{ route('resumes.edit', $resume->id) }}" class="btn-link me-2">

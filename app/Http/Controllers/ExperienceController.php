@@ -11,9 +11,13 @@ class ExperienceController extends Controller
 {
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
+        $validator = Validator::make($request->all(), 
+        [
             'start_date' => 'required|date',
             'end_date' => 'date|nullable|end_date_after_or_equal:start_date',
+        ], 
+        $messages = [
+            'end_date_after_or_equal' => 'The :attribute field should not earlier than start date.',
         ]);
 
         if ($validator->fails()) {
@@ -42,6 +46,9 @@ class ExperienceController extends Controller
         $validator = Validator::make($request->all(), [
             'start_date' => 'required|date',
             'end_date' => 'date|nullable|end_date_after_or_equal:start_date',
+        ], 
+        $messages = [
+            'end_date_after_or_equal' => 'The :attribute field should not earlier than start date.',
         ]);
 
         if ($validator->fails()) {

@@ -22,7 +22,7 @@ Route::get('/', function () {
 });
 
 // Route::get('resume/{resume}/public', [ResumeController::class, 'showPublic'])->name('resume.public');
-Route::get('resume/public/{public_url}', [ResumeController::class, 'showPublic'])->name('resume.public');
+Route::get('resume/public/{public_url}', [ResumeController::class, 'showPublic'])->name('resumes.public');
 
 Route::get('/dashboard', function () {
     return view('dashboard');

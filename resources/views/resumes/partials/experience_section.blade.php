@@ -20,7 +20,7 @@
                     </div>
                 </div>
                 <div class="details">
-                    <p>{{ isset($experience->job_description) ? $experience->job_description : '' }}
+                    <p>{!! !empty($experience->job_description) ?  nl2br(e($experience->job_description)) : '' !!}
                     </p>
                 </div>
             </div>

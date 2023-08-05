@@ -42,7 +42,7 @@
                                         <h3 class="tagline">
                                             {{ $resume->title }}
                                         </h3>
-                                        <p>{{ $resume->about_me }}</p>
+                                        <p>{!! !empty($resume->about_me) ? nl2br(e($resume->about_me)):'' !!}</p>
                                     </div>
 
                                     @if (!empty($educations))
@@ -90,7 +90,7 @@
                                                     </div>
                                                     <!--//meta-->
                                                     <div class="details">
-                                                        <p>{{ isset($experience->job_description) ? $experience->job_description : '' }}
+                                                        <p>{!! !empty($experience->job_description) ? nl2br(e($experience->job_description)) : '' !!}
                                                         </p>
                                                     </div>
                                                     <!--//details-->

@@ -14,6 +14,9 @@ class EducationController extends Controller
         // Validate the request and save the education
         $validator = Validator::make($request->all(), [
             'graduation_year' => 'required|integer|between:' . (date('Y')-50) . ',' . date('Y')  . '|graduation_year_not_greater',
+        ], 
+        $messages = [
+            'graduation_year_not_greater' => 'Your graduation year should no be future year.',
         ]);
 
         if ($validator->fails()) {
@@ -41,6 +44,9 @@ class EducationController extends Controller
         
         $validator = Validator::make($request->all(), [
             'graduation_year' => 'required|integer|between:' . (date('Y')-50) . ',' . date('Y') . '|graduation_year_not_greater',
+        ], 
+        $messages = [
+            'graduation_year_not_greater' => 'Your graduation year should no be future year.',
         ]);
 
         
