@@ -19,10 +19,6 @@ Refer to the [Installation Guide](INSTALL.md) for detailed instructions on setti
 
 ## Usage
 
-Explain how users can use your application. Provide examples, screenshots, and step-by-step instructions for common tasks.
-
-## Usage
-
 1. Register or log in to access the dashboard.
 2. Create new resumes with unique titles.
 3. Add education records to showcase your academic achievements.
